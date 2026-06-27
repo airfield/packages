@@ -1,0 +1,7 @@
+name: opencv2
+version: 1.0.0
+system:
+  - >-
+    apt-get update && apt-get install -y libopencv-dev
+    && rm -rf /var/lib/apt/lists/*
+user: []

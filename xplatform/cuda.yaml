@@ -1,7 +1,5 @@
 name: cuda
 version: 1.0.0
-ros_versions:
-  - humble
 system: []
 user:
   - >-

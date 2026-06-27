@@ -1,0 +1,10 @@
+name: cv_bridge
+version: 1.0.0
+ros_versions:
+  - humble
+  - jazzy
+system:
+  - >-
+    apt-get update && apt-get install -y ros-$ROS_DISTRO-cv-bridge
+    && rm -rf /var/lib/apt/lists/*
+user: []

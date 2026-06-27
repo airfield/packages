@@ -1,7 +1,5 @@
 name: torch
 version: 1.0.0
-ros_versions:
-  - humble
 host_dependencies:
   - name: nvidia_driver
     min_version: "535.0"

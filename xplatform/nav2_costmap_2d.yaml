@@ -1,0 +1,10 @@
+name: nav2_costmap_2d
+version: 1.0.0
+ros_versions:
+  - humble
+  - jazzy
+system:
+  - >-
+    apt-get update && apt-get install -y ros-$ROS_DISTRO-nav2-costmap-2d
+    && rm -rf /var/lib/apt/lists/*
+user: []

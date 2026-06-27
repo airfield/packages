@@ -1,0 +1,10 @@
+name: rosbag2_py
+version: 1.0.0
+ros_versions:
+  - humble
+  - jazzy
+system:
+  - >-
+    apt-get update && apt-get install -y ros-$ROS_DISTRO-rosbag2
+    && rm -rf /var/lib/apt/lists/*
+user: []

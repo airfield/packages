@@ -1,0 +1,5 @@
+name: python3-opencv
+version: 1.0.0
+system: []
+user:
+  - python3 -m pip install opencv-python-headless
