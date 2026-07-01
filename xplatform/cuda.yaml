@@ -1,13 +1,11 @@
 name: cuda
 version: 1.0.0
-ros_versions:
-  - humble
 system: []
 user:
   - >-
     set -eu;
     if [ "${TORCH_INSTALL_TARGET:-cpu}" = "gpu" ]; then
-    python3 -m pip install --no-cache-dir "nvidia-cuda-runtime-cu12>=12.1,<13";
+    python3 -m pip install --break-system-packages --no-cache-dir "nvidia-cuda-runtime-cu12>=12.1,<13";
     else
     echo "Skipping CUDA runtime install for CPU torch mode";
     fi
