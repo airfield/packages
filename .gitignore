@@ -1,0 +1,4 @@
+# colcon build output — this repo holds dependency manifests, never build state
+build/
+install/
+log/
