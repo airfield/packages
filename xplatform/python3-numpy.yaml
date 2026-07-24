@@ -2,4 +2,4 @@ name: python3-numpy
 version: 1.0.0
 system: []
 user:
-  - python3 -m pip install numpy
+  - python3 -m pip install --break-system-packages numpy
