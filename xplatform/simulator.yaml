@@ -1,5 +1,8 @@
 name: simulator
 version: 1.0.0
-system:
-  - apt-get update && apt-get install -y libglu1-mesa libxcursor1 libxrandr2 libxss1 libasound2t64
-user: []
+apt:
+  - libglu1-mesa
+  - libxcursor1
+  - libxrandr2
+  - libxss1
+  - libasound2t64

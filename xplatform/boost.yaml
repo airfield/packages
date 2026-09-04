@@ -1,5 +1,5 @@
 name: boost
 version: 1.0.0
-system:
-  - apt-get update && apt-get install -y libboost-dev libboost-system-dev && rm -rf /var/lib/apt/lists/*
-user: []
+apt:
+  - libboost-dev
+  - libboost-system-dev

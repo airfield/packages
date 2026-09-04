@@ -1,5 +1,4 @@
 name: i2c
 version: 1.0.0
-system:
-  - apt-get update && apt-get install -y libi2c-dev && rm -rf /var/lib/apt/lists/*
-user: []
+apt:
+  - libi2c-dev
