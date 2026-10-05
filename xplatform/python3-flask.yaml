@@ -1,4 +1,4 @@
 name: python3-flask
 version: 1.0.0
-pip:
-  - flask
+apt:
+  - python3-flask

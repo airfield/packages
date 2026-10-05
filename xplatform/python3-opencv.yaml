@@ -1,4 +1,7 @@
 name: python3-opencv
 version: 1.0.0
-pip:
-  - opencv-python-headless
+# Ubuntu's own OpenCV, the build every ROS binary (cv_bridge and friends) was
+# compiled against. Keep this on apt: pip's opencv-python pulls in a newer
+# numpy and sits in front of Ubuntu's copy, and cv_bridge then crashes.
+apt:
+  - python3-opencv
