@@ -10,8 +10,8 @@ x86_64/*.yaml
 arm64/*.yaml
 ```
 
-Each manifest name must match the dependency name used in a package
-`airfield.yaml`.
+Each manifest name must match the dependency name a package uses, in its
+`package.xml` or in the `dependencies:` list of its `airfield.yaml`.
 
 Example package dependency:
 
@@ -25,6 +25,22 @@ Matching manifest:
 ```text
 x86_64/tqdm.yaml
 ```
+
+Most dependencies need no manifest. In a ROS package, a name with no manifest
+(whether it comes from `package.xml` or from `airfield.yaml`) is installed
+from apt under its conventional name: `ros-<distro>-<name>` for a ROS package
+name, or the name itself for a Debian-style name such as `python3-numpy`.
+
+Add a manifest for what that rule cannot express:
+
+- the dependency comes from pip, a source build or a downloaded `.deb`;
+- it installs differently per machine or architecture;
+- the apt package is named differently (`opencv2` standing for
+  `libopencv-dev`, or an older rosdep key such as `eigen`).
+
+A manifest takes precedence over the rule. One that only installs
+`ros-$ROS_DISTRO-<name>` repeats the rule; such manifests are kept here for
+Airfield versions that predate the rule, and new ones are not needed.
 
 Manifest fields:
 
