@@ -1,5 +1,4 @@
 name: glog
 version: 1.0.0
-system:
-  - apt-get update && apt-get install -y libgoogle-glog-dev && rm -rf /var/lib/apt/lists/*
-user: []
+apt:
+  - libgoogle-glog-dev

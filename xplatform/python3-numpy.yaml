@@ -1,5 +1,6 @@
 name: python3-numpy
 version: 1.0.0
-system: []
-user:
-  - python3 -m pip install --break-system-packages numpy
+# Ubuntu's own numpy, the one ROS binaries and apt's Python packages were
+# compiled against. Keep this on apt: pip's numpy 2.x breaks them.
+apt:
+  - python3-numpy

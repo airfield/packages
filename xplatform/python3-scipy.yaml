@@ -1,5 +1,4 @@
 name: python3-scipy
 version: 1.0.0
-system:
-  - apt-get update && apt-get install -y python3-scipy && rm -rf /var/lib/apt/lists/*
-user: []
+apt:
+  - python3-scipy

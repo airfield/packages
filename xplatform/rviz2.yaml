@@ -1,5 +1,4 @@
 name: rviz2
 version: 1.0.0
-system:
-  - apt-get update && apt-get install -y ros-$ROS_DISTRO-rviz2
-user: []
+apt:
+  - ros-$ROS_DISTRO-rviz2
